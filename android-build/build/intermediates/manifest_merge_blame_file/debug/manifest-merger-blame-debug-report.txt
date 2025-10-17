@@ -1,0 +1,116 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.qtproject.example.CarControl"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="23"
+9-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml
+10        android:targetSdkVersion="31" />
+10-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml
+11
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:7:5-67
+12-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:7:22-64
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:8:5-81
+13-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:8:22-78
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:9:5-79
+14-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:9:22-76
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:10:5-79
+15-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:10:22-76
+16    <uses-permission android:name="android.permission.BLUETOOTH" />
+16-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:11:5-68
+16-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:11:22-65
+17    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+17-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:12:5-74
+17-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:12:22-71
+18    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+18-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:13:5-73
+18-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:13:22-70
+19    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+19-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:14:5-78
+19-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:14:22-75
+20    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+20-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:15:5-76
+20-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:15:22-73
+21
+22    <supports-screens
+22-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:17:5-21:39
+23        android:anyDensity="true"
+23-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:18:9-34
+24        android:largeScreens="true"
+24-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:19:9-36
+25        android:normalScreens="true"
+25-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:20:9-37
+26        android:smallScreens="true" />
+26-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:21:9-36
+27
+28    <application
+28-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:22:5-54:19
+29        android:name="org.qtproject.qt.android.bindings.QtApplication"
+29-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:23:9-71
+30        android:allowBackup="true"
+30-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:28:9-35
+31        android:allowNativeHeapPointerTagging="false"
+31-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:27:9-54
+32        android:debuggable="true"
+33        android:fullBackupOnly="false"
+33-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:29:9-39
+34        android:hardwareAccelerated="true"
+34-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:24:9-43
+35        android:label="CarControl"
+35-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:25:9-35
+36        android:requestLegacyExternalStorage="true" >
+36-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:26:9-52
+37        <activity
+37-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:30:9-53:20
+38            android:name="org.qtproject.qt.android.bindings.QtActivity"
+38-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:31:13-72
+39            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
+39-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:32:13-182
+40            android:exported="true"
+40-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:36:13-36
+41            android:label="CarControl"
+41-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:33:13-39
+42            android:launchMode="singleTop"
+42-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:34:13-43
+43            android:screenOrientation="unspecified" >
+43-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:35:13-52
+44            <intent-filter>
+44-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:37:13-40:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:38:17-69
+45-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:38:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:39:17-77
+47-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:39:27-74
+48            </intent-filter>
+49
+50            <meta-data
+50-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:42:11-44:46
+51                android:name="android.app.lib_name"
+51-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:43:17-52
+52                android:value="CarControl" />
+52-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:44:17-43
+53            <meta-data
+53-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:46:11-48:36
+54                android:name="android.app.arguments"
+54-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:47:17-53
+55                android:value="" />
+55-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:48:17-33
+56            <meta-data
+56-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:50:13-52:43
+57                android:name="android.app.extract_android_style"
+57-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:51:17-65
+58                android:value="minimal" />
+58-->D:\Dormitory\CarControl\android-build\AndroidManifest.xml:52:17-40
+59        </activity>
+60    </application>
+61
+62</manifest>
