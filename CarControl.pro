@@ -1,7 +1,5 @@
 QT       += core gui bluetooth serialport
-android {
-    QT += androidextras
-}
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
@@ -24,7 +22,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-ANDROID_PACKAGE_SOURCE_DIR = C:/Users/user/AndroidStudioProjects/BluetoothBridge/app/src/main
+#ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

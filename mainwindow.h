@@ -3,12 +3,11 @@
 
 #include <QMainWindow>
 #include <QTimer>
-#include <QtBluetooth>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 
 #include "joystick.h"
-
+#include "bluetoothbridge.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +25,7 @@ public:
     Joystick *joyStick = nullptr;
     QTimer *tim = nullptr;
     QSerialPort *serialPort = nullptr;
+    BluetoothBridge *bluetoothBridge = nullptr;
 private:
     Ui::MainWindow *ui;
 };

@@ -11,21 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
     joyStick = new Joystick(ui->HandleFrame);
     joyStick->raise();
     joyStick->show();
-
-    serialPort = new QSerialPort(this);
-    serialPort->setPortName("COM6 ");
-    serialPort->setBaudRate(QSerialPort::Baud9600);
-    serialPort->setDataBits(QSerialPort::Data8);
-    serialPort->setParity(QSerialPort::NoParity);
-    serialPort->setStopBits(QSerialPort::OneStop);
-    serialPort->setFlowControl(QSerialPort::NoFlowControl);
-
-    if(serialPort->open(QIODevice::ReadWrite)){
-        qDebug() << "Serial opened";
-    }
-    else{
-        qDebug() << "Failed to open Serial" << serialPort->errorString();
-    }
+    QString mac = "98:DA:50:01:E9:2A";
+    bluetoothBridge = new BluetoothBridge("98:DA:50:01:E9:2A", this);
 
     tim = new QTimer(this);
     connect(tim, &QTimer::timeout, this, &MainWindow::onTimeout);
@@ -41,7 +28,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::onTimeout(){
     QByteArray packet = calculateInfo();
-    serialPort->write(packet);
+    bluetoothBridge->sendMessage(packet);
+//    serialPort->write(packet);
 //    if(serialPort->isOpen()){
 //        bytesWritten = serialPort->write(packet);
 //    }
@@ -53,10 +41,13 @@ void MainWindow::onTimeout(){
     QByteArray result;
     int dx = joyStick->dx,
         dy = joyStick->dy;
-    dy = -dy;//Инвертируем ось, теперь вверх это + изменение
-    double angle = qAtan2(dy, dx);
-    unsigned char deg = qRadiansToDegrees(angle);
     signed char speed = std::sqrt(dx*dx+dy*dy);
+    double angle = qAtan2(abs(dy), dx);
+    unsigned char deg = qRadiansToDegrees(angle);
+    dy = -dy;//Инвертируем ось, теперь вверх это + изменение
+
+    qDebug() << deg;
+
     if(dx == dy && dx == 0){
         deg = 90;
     }
