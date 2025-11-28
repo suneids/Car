@@ -1,9 +1,0 @@
-org.qtproject.example.CarControl-pngs-0 D:\Dormitory\CarControl\android-build\build\generated\res\pngs\debug
-org.qtproject.example.CarControl-resValues-1 D:\Dormitory\CarControl\android-build\build\generated\res\resValues\debug
-org.qtproject.example.CarControl-rs-2 D:\Dormitory\CarControl\android-build\build\generated\res\rs\debug
-org.qtproject.example.CarControl-mergeDebugResources-3 D:\Dormitory\CarControl\android-build\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
-org.qtproject.example.CarControl-mergeDebugResources-4 D:\Dormitory\CarControl\android-build\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-org.qtproject.example.CarControl-merged_res-5 D:\Dormitory\CarControl\android-build\build\intermediates\merged_res\debug
-org.qtproject.example.CarControl-android-build-6 D:\Dormitory\CarControl\android-build\res
-org.qtproject.example.CarControl-debug-7 D:\Dormitory\CarControl\android-build\src\debug\res
-org.qtproject.example.CarControl-java-8 D:\QT\6.5.2\android_armv7\src\android\java\res
