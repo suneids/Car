@@ -1,2 +1,5 @@
 *.obj
 moc_*
+*.apk
+*.so
+/app/android_/android_build/
