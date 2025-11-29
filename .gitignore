@@ -3,3 +3,4 @@ moc_*
 *.apk
 *.so
 app/android_/android-build/
+app/android_/android-app-process/
