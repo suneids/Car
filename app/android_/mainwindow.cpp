@@ -42,8 +42,8 @@ void MainWindow::onTimeout(){
     int dx = joyStick->dx,
         dy = joyStick->dy;
     signed char speed = std::sqrt(dx*dx+dy*dy);
-    double angle = qAtan2(abs(dy), dx);
-    unsigned char deg = qRadiansToDegrees(angle);
+    double angle = qAtan2(dy, dx);
+    int deg = qRadiansToDegrees(angle);
     dy = -dy;//Инвертируем ось, теперь вверх это + изменение
 
     qDebug() << deg;
@@ -54,14 +54,18 @@ void MainWindow::onTimeout(){
     else{
         deg -= 180; //меняем точку отсчета, теперь самая левая точка не 180° а 0°
         deg = -deg; //инвертируем угол, теперь он увеличивается по часовой стрелке.
+        if(dy > 0){
+            deg = 360 -deg; //инвертируем угол, теперь он увеличивается по часовой стрелке.
+        }
         if(dy < 0){
             deg -=180;// в случае движения назад смещаем точку отсчета еще на половину окружности, теперь 0° на своем привычном месте, но там где 270° теперь 90°.
-            deg = 180 - deg;
+            deg = 180 - abs(deg);
         }
     }
     if(dy < 0){
         speed = -speed; //Скорость потеряла свой знак, в случае джойстика внизу, делаем ее отрицательной
     }
+    deg = abs(deg);
     result.append(startByte);
     result.append(deg);
     result.append(speed);
