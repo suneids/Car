@@ -2,4 +2,4 @@
 moc_*
 *.apk
 *.so
-Car/app/android-build/
+app/android_/android-build/
